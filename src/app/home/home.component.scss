@@ -1,0 +1,132 @@
+.image_height {
+  height: 80vh;
+  width: 100vw;
+}
+.join-home {
+  height: 5vh;
+  margin-top: 1vh;
+  color: white;
+  background: linear-gradient(to bottom right, rgb(68, 230, 255), green);
+  background-size: 200% 200%;
+  animation: glowingAnimation 5s infinite ease-in-out;
+}
+
+@keyframes glowingAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.join-text {
+  text-align: center;
+  padding-top: 8px;
+  font-size: 20px;
+  font-weight: bolder;
+  overflow: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .image_height {
+    height: 60vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .image_height {
+    height: 30vh;
+  }
+  .join-text {
+    font-size: 16px;
+  }
+}
+// after join content section
+.content-1 {
+  // background: rgb(186, 186, 186);
+  display: flex;
+  justify-content: space-around;
+}
+.content_Text1 {
+  width: 40vw;
+  height: 40vh;
+  margin-top: 10vh;
+  text-align: justify;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    // border: 1px solid whitesmoke;
+    border-radius: 10px;
+    background: ghostwhite;
+    padding: 1vw;
+    cursor: pointer;
+  }
+}
+.content_Image1 img {
+  width: 30vw;
+  height: 60vh;
+  margin: 10vh 5vw;
+}
+
+.content-2 {
+  // background: rgb(186, 186, 186);
+  display: flex;
+  justify-content: space-around;
+}
+.content_Text2 {
+  width: 40vw;
+  height: 40vh;
+  margin-top: 10vh;
+  text-align: justify;
+  overflow: scroll;
+}
+.content_Image2 img {
+  width: 30vw;
+  height: 60vh;
+  margin: 10vh 5vw;
+}
+.center-part {
+  transition: all 0.5s ease-in;
+  &:hover {
+    // border: 1px solid whitesmoke;
+    border-radius: 10px;
+    background: ghostwhite;
+    padding: 1vw;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 800px) {
+  .center-part {
+    overflow: scroll;
+    height: 30vh;
+  }
+  .content-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content_Image1 img {
+    height: 20vh;
+    width: 70vw;
+  }
+  .content_Text1 {
+    height: 20vh;
+    width: 70vw;
+    align-self: center;
+    overflow: scroll;
+  }
+  .content-2 {
+    width: 100vw;
+  }
+  .content_Image2 img {
+    height: 20vh;
+    width: 40vw;
+    margin: 0;
+  }
+  .content_Text2 {
+    width: 30vw;
+  }
+  .donate-section {
+    flex-direction: column;
+  }
+}

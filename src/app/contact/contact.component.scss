@@ -1,0 +1,35 @@
+.contact-banner {
+  background: url("../../../public/assets/contact/contact.jpg");
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //   background-position: center;
+  margin-bottom: 4vh;
+}
+
+.width {
+  width: 30vw;
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .parent {
+    flex-direction: column;
+  }
+  .width {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .parent {
+    flex-direction: column;
+  }
+  .contact-banner {
+    height: 40vh;
+  }
+}
+.card {
+  margin-bottom: 3vh;
+}

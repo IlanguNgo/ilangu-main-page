@@ -1,0 +1,41 @@
+// Volunteer Banner
+.volunteer-banner {
+  background: url("../../../public/assets/volunteer/volunteer.jpg");
+  height: 70vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @media screen and (max-width: 900px) {
+    height: 40vh;
+  }
+}
+
+.enrollment-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 6vh;
+}
+.space {
+  line-height: 4vh;
+}
+.why-enrollment {
+  width: 30vw;
+  border-radius: 20px;
+}
+.volunteer-enrollment {
+  border: 1px solid whitesmoke;
+  padding: 3vh;
+}
+
+.error {
+  color: red;
+}
+@media screen and (max-width: 800px) {
+  .why-enrollment {
+    width: 70vw;
+    margin-bottom: 5vh;
+  }
+}

@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+html {
+  scroll-behavior: smooth;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.heart {
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.text-justify {
+  text-align: justify;
+}

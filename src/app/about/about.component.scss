@@ -1,0 +1,165 @@
+* {
+  transition: all 1s ease-in-out;
+}
+.about-page {
+  background-image: url("../../../public/assets/about/banner1.jpg");
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  // object-fit: cover;
+  height: 30vh;
+  @media screen and (min-width: 992px) {
+    height: 60vh; // Adjust height for larger screens
+  }
+
+  h2 {
+    color: white;
+  }
+  h6 {
+    color: white;
+  }
+}
+
+// Vision
+.vision {
+  margin: 6vh 0;
+
+  flex-wrap: wrap;
+}
+.vision-image {
+  img {
+    height: 40vh;
+    width: 25vw;
+    border-radius: 15px;
+  }
+  &:hover {
+    transform: scale(0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+.vision-para {
+  width: 35vw;
+  ul {
+    list-style: none;
+    font-weight: 500;
+    li {
+      margin-top: 1vh;
+    }
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Responsive for Mobile
+
+@media screen and (max-width: 800px) {
+  .vision {
+    flex-direction: column;
+  }
+  .vision-image {
+    img {
+      width: 60vw;
+      height: 20vh;
+      margin-left: 20vw;
+    }
+  }
+  .vision-para {
+    width: 80vw;
+    margin-left: 10vw;
+    margin: 3vh 10vw;
+  }
+}
+
+// Who We Are Section
+.who-we-are {
+  background: whitesmoke;
+  width: 90vw;
+  border-radius: 15px;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  ul {
+    list-style-type: square;
+    li {
+      line-height: 4vh;
+    }
+    text-align: justify;
+  }
+}
+
+// From Trustee Members Section
+.team {
+  margin: 3vh 0;
+}
+.trustee-notes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5vw 5vw;
+  border: 1px solid whitesmoke;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-left: 5px solid #333; // Optional, for visual left line
+  img {
+    border-radius: 50%;
+    height: 30vh;
+    width: 20vw;
+  }
+  .message {
+    width: 60vw;
+    margin-top: 10vh;
+    margin-left: 5vw;
+
+    blockquote {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.trustee-notes2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5vw 5vw;
+  border: 1px solid whitesmoke;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: 5px solid #333; // Optional, for visual left line
+  img {
+    border-radius: 50%;
+    height: 30vh;
+    width: 20vw;
+  }
+  .message2 {
+    width: 60vw;
+    margin-top: 10vh;
+    margin-left: 5vw;
+
+    blockquote {
+      font-size: 1.6rem;
+    }
+  }
+}
+// Responsive for mobile for Team Notes
+@media screen and (max-width: 800px) {
+  .team {
+    img {
+      margin-top: 10vh;
+      height: 15vh;
+      width: 20vw;
+      margin-left: 2vw;
+    }
+  }
+  .about-title {
+    font-size: 16px;
+  }
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bolder;
+  @media screen and (max-width: 992px) {
+    font-size: 22px; // Adjust height for larger screens
+  }
+}
