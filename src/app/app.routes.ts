@@ -9,10 +9,30 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'about',
-    component: AboutComponent,
+    loadComponent: () =>
+      import('./about/about.component').then((m) => m.AboutComponent),
   },
-  { path: 'blogs', component: BlogComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'ourwork', component: OurworkComponent },
-  { path: 'volunteer', component: VolunteerComponent },
+  {
+    path: 'blogs',
+    loadComponent: () =>
+      import('./blog/blog.component').then((m) => m.BlogComponent),
+  },
+
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./contact/contact.component').then((m) => m.ContactComponent),
+  },
+  {
+    path: 'ourwork',
+    loadComponent: () =>
+      import('./ourwork/ourwork.component').then((m) => m.OurworkComponent),
+  },
+  {
+    path: 'volunteer',
+    loadComponent: () =>
+      import('./volunteer/volunteer.component').then(
+        (m) => m.VolunteerComponent
+      ),
+  },
 ];
