@@ -15,7 +15,7 @@ export interface Volunteer {
   providedIn: 'root',
 })
 export class VolunteerService {
-  private baseUrl = 'http://192.168.29.74:3000/volunteers'; // 🔥 Your backend URL
+  private baseUrl = '/api/volunteers'; // 🔥 Your backend URL
 
   constructor(private http: HttpClient) {}
 
