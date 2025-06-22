@@ -3,7 +3,7 @@
   <nav class="navbar">
     <div class="logo">
       <a routerLink="/">
-        <img src="assets/ilanguLogo.png" alt="Ilangu NGO Logo" /></a>
+        <img src="assets/ilangu_Logo.png" alt="Ilangu NGO Logo" /></a>
     </div>
     <div class="showMenu" (click)="toggleSideMenu()">
       <p class="menubar"></p>
@@ -27,11 +27,13 @@
 
 <router-outlet />
 
-<div class="footer-area bg-success text-white mt-4">
+<div class="footer-area bg-black text-white mt-4">
   <div class="d-flex justify-content-around footer-section align-items-center">
     <div class="footer-first">
-      <img src="assets/ilanguLogo.png" alt="" />
-      <p class="footer-first-para">
+      <img src="assets/ilangu_Logo.png" alt="" style=" border-radius: 3vh;" />
+    </div>
+    <div class="footer-first">
+      <p class="footer-first-para " style="text-align: justify;">
         Ilangu NGO, founded in 2022, works to uplift communities by supporting education, empowering youth, and caring
         for children in orphanages. We believe in creating lasting change through compassion, learning, and community
         development.
@@ -83,9 +85,9 @@
   </div>
 </div>
 <!-- <p class="line"></p> -->
-<div class="footer-details-section bg-success text-white">
-  <div class="d-flex justify-content-around flex-wrap">
-    <div>
+<div class="footer-details-section bg-black text-white">
+  <div class="d-flex justify-content-around flex-wrap ">
+    <div class="address">
       <h5 class="d-inline-block mx-2"><i class="fa-solid fa-location-dot"></i></h5>
       <address class="text-white d-inline">
         206B Thiruvalluvar Nagar, Ayanavaram, Chennai - 600023,Tamil Nadu, INDIA
