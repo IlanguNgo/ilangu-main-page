@@ -3,7 +3,7 @@
   <nav class="navbar">
     <div class="logo">
       <a routerLink="/">
-        <img src="assets/ilangu_Logo.png" alt="Ilangu NGO Logo" /></a>
+        <img src="assets/ilanguLogo.svg" alt="Ilangu NGO Logo" class="w-100" /></a>
     </div>
     <div class="showMenu" (click)="toggleSideMenu()">
       <p class="menubar"></p>
@@ -21,6 +21,7 @@
         <span class="btn btn-warning fw-semibold" routerLink="volunteer" (click)="closeSideMenu()">
           Volunteer Enrollment</span>
       </li>
+      <li> <button class="btn btn-danger fw-semibold" routerLink="register">Register</button> </li>
     </ul>
   </nav>
 </div>
@@ -121,4 +122,9 @@
       </div>
     </div>
   </div>
+</div>
+
+<div>
+  <!-- <button class="btn btn-danger fs-2 register-event heart" routerLink="register">Register Now For the Event on July 13,
+    2025</button> -->
 </div>

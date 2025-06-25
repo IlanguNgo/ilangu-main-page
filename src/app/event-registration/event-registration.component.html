@@ -1,0 +1,144 @@
+<div class="volunteer-banner">
+
+</div>
+<div class="enrollment-area">
+  <div class="why-enrollment bg-warning p-5">
+    <h3 class="fw-bolder">Enroll as a Volunteer Today and Make a Difference!
+    </h3>
+    <h6 class="mt-5 space">
+
+      Your time, skills, and passion are invaluable assets that will shape a better tomorrow. We invite you to
+      join our mission to uplift and empower those in need.
+
+
+    </h6>
+    <h6 class="mt-5 fs-5 fw-bold">Together, let’s create brighter futures!</h6>
+  </div>
+  <div class="volunteer-enrollment ">
+    <form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
+      <!-- Name Field -->
+      <div>
+        <h3 class="text-primary text-center my-3">Registration Form</h3>
+        <!-- <div class="d-flex justify-content-around"> -->
+        <div class="form-floating mb-3 ">
+          <input type="text" class="form-control" id="firstName" placeholder="First Name" formControlName="fullName" />
+          <label for="floatingInput">Name <span class="error">*</span></label>
+          <div *ngIf="
+                                  registrationForm.get('fullName')?.invalid &&
+                                  registrationForm.get('fullName')?.touched
+                                " class="error">
+            Kindly enter your name
+          </div>
+        </div>
+        <!-- <div class="form-floating mb-3 ms-3">
+                <input type="text" class="form-control" id="surName" placeholder="Second Name"
+                    formControlName="secondName" />
+                <label for="floatingInput">Second Name</label>
+            </div> -->
+
+        <!-- Floating Label Style for Radio Buttons (Gender) -->
+        <div class="form-floating mb-3">
+          <div class="form-control pt-4" style="height: auto;">
+            <div class="form-check form-check-inline me-3">
+              <input class="form-check-input" type="radio" id="genderMale" value="Male" formControlName="gender"
+                name="gender" />
+              <label class="form-check-label" for="genderMale">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" id="genderFemale" value="Female" formControlName="gender"
+                name="gender" />
+              <label class="form-check-label" for="genderFemale">Female</label>
+            </div>
+          </div>
+          <label for="genderMale">Gender <span class="error">*</span></label>
+          <div *ngIf="
+      registrationForm.get('gender')?.invalid &&
+      registrationForm.get('gender')?.touched
+    " class="error">
+            Please select your gender.
+          </div>
+        </div>
+        <!-- <div class="form-check form-check-inline">
+<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+<label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+</div> -->
+        <div class="form-floating mb-3">
+          <input type="number" class="form-control" id="phoneNumber" placeholder="Mobile Number"
+            formControlName="mobileNumber" />
+          <label for="floatingPassword">Phone Number <span class="error">*</span></label>
+          <div *ngIf="
+              registrationForm.get('mobileNumber')?.invalid &&
+              registrationForm.get('mobileNumber')?.touched
+            " class="error">
+            Phone Number is Invalid
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="yourname@google.com"
+            formControlName="mailID" />
+          <label for="floatingInput">Email address <span class="error">*</span></label>
+          <div *ngIf="
+              registrationForm.get('mailID')?.invalid &&
+              registrationForm.get('mailID')?.touched
+            " class="error">
+            Please enter a valid email.
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="phoneNumber" placeholder="Mobile Number"
+            formControlName="highestDegree" />
+          <label for="floatingPassword">Highest Degree <span class="error">*</span></label>
+          <div *ngIf="
+                                  registrationForm.get('highestDegree')?.invalid &&
+                                  registrationForm.get('highestDegree')?.touched
+                                " class="error">
+            Kindly enter your Highest Degree
+          </div>
+        </div>
+        <div class="form-floating mb-3 ">
+          <input type="text" class="form-control" id="firstName" placeholder="First Name"
+            formControlName="collegeName" />
+          <label for="floatingInput">College Name <span class="error">*</span></label>
+          <div *ngIf="
+                     registrationForm.get('collegeName')?.invalid &&
+                     registrationForm.get('collegeName')?.touched
+                                " class="error">
+            Kindly enter your College Name
+          </div>
+        </div>
+        <!-- <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="comment" placeholder="First Name"
+                formControlName="comment" />
+            <label for="comment">Your Thoughts In Few Words
+            </label>
+
+        </div> -->
+        <!-- <div class="form-check form-switch mb-3">
+            <label class="form-check-label" for="switchCheckChecked">Subscribe NewsLetter via Email ?
+            </label>
+            <input class="form-check-input bg-success " type="checkbox" role="switch" id="switchCheckChecked"
+                checked formControlName="subscribe" />
+        </div> -->
+      </div>
+
+      <!-- Submit Button -->
+      <div class="align-self-center mx-auto">
+        <button type="submit" [disabled]="registrationForm.invalid" class="btn btn-success">
+          Register
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="why-enrollment bg-success text-white mt-3 p-5">
+    <h3 class="fw-bolder">Enroll as a Volunteer Today and Make a Difference!
+    </h3>
+    <h6 class="mt-5 space">
+
+      Your time, skills, and passion are invaluable assets that will shape a better tomorrow. We invite you to
+      join our mission to uplift and empower those in need.
+
+
+    </h6>
+    <h6 class="mt-5 fs-5 fw-bold">Together, let’s create brighter futures!</h6>
+  </div>
+</div>

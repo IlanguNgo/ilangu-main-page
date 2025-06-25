@@ -9,10 +9,10 @@ import {
   EmailValidator,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NgIf, NgFor } from '@angular/common';
+
 @Component({
   selector: 'app-volunteer',
-  imports: [CommonModule, ReactiveFormsModule, NgIf],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './volunteer.component.html',
   styleUrl: './volunteer.component.scss',
 })
@@ -26,7 +26,7 @@ export class VolunteerComponent {
     this.enrollmentForm = this.formBuilder.group({
       name: ['', Validators.required],
       secondName: [''],
-      email: ['', [, Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       subscribe: [true],
       comment: [''],

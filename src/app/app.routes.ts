@@ -35,4 +35,11 @@ export const routes: Routes = [
         (m) => m.VolunteerComponent
       ),
   },
+  {
+    path: 'register',
+    loadComponent: () =>
+      import('./event-registration/event-registration.component').then(
+        (m) => m.EventRegistrationComponent
+      ),
+  },
 ];

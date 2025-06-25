@@ -12,7 +12,8 @@
 }
 
 .logo img {
-  height: 60px;
+  height: 100px !important;
+  width: 20vw !important;
   transition: all 0.3s ease-in-out;
   // width: 75px;
 }
@@ -241,4 +242,10 @@
 
 .heart {
   animation: heartbeat 2s ease-in-out infinite;
+}
+.register-event {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
