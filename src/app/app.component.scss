@@ -76,7 +76,14 @@
     margin: 1vh 5px;
   }
 }
-
+@media screen and (max-width: 2000px) {
+  .footer-first {
+    img {
+      height: 80px;
+      width: 200px;
+    }
+  }
+}
 /* ✅ Ultra-Wide Screens (TVs, 4K Monitors) */
 @media screen and (max-width: 1600px) {
   .logo img {
