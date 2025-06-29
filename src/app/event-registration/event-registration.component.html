@@ -1,7 +1,7 @@
 <div class="volunteer-banner">
 
 </div>
-<div class="enrollment-area">
+<!-- <div class="enrollment-area">
   <div class="why-enrollment bg-warning p-5">
     <h3 class="fw-bolder">Enroll as a Volunteer Today and Make a Difference!
     </h3>
@@ -20,12 +20,12 @@
           <li>Event(s) registered for</li>
           <li>Relevant files (as specified)</li>
         </ul>
-      </li>
+      </li> -->
 
-    </ul>
+<!-- </ul> -->
 
 
-    <p> Google Forms : <a href="">....................</a></p>
+<!-- <p> Google Forms : <a href="">....................</a></p>
 
     <h6 class="text-decoration-underline"> Payment Bank DETAILS</h6>
     <code class="text-primary">
@@ -39,16 +39,27 @@
     
     
     
-</code>
-    <p class="text-danger"> *please check the name twice before the payment.</p>
+</code> -->
+<!-- <p class="text-danger"> *please check the name twice before the payment.</p>
     <footer class="fw-bolder">
       Your time, skills, and passion are invaluable assets that will shape a better tomorrow. We invite you to
       join our mission to uplift and empower those in need.
-    </footer>
+    </footer> -->
 
 
-    <!-- <h6 class="mt-5 fs-5 fw-bold">Together, let’s create brighter futures!</h6> -->
+<!-- <h6 class="mt-5 fs-5 fw-bold">Together, let’s create brighter futures!</h6> -->
+<!-- </div> -->
+<div class="registration-page">
+  <div>
+    <div class="image">
+      <img class="image" src="assets/event/1.webp" alt="">
+    </div>
+    <div class="image">
+      <img src="assets/event/2.webp" alt="">
+    </div>
   </div>
+
+
   <div class="volunteer-enrollment ">
     <form [formGroup]="registrationForm" (ngSubmit)="onRegister()">
       <!-- Name Field -->
@@ -164,46 +175,26 @@
       </div>
     </form>
   </div>
-  <div class="why-enrollment bg-success text-white mt-3 p-5">
-    <h3 class="fw-bolder"> ILANGU NGO Welcomes you to,
-
-    </h3>
-    <h4>Raise Against Drug Abuse!</h4>
-    <h6 class="mt-5 space">
-
-      You're invited to participate in our event featuring five distinct competition categories. To join, follow these
-      steps:
-
-
-    </h6>
-
-
-    <div>
-      <p class="fw-bolder text-decoration-underline">Registration and Submission Guidelines</p>
-      <ol>
-        <li>⁠Register on our website.</li>
-        <li>⁠Fill out the Google form with mandatory information and upload your files (jpg, pdf, mp4, mp3, etc.).</li>
-
-      </ol>
-    </div>
-
-
-
-    <div>
-      <h5 class="text-decoration-underline">Event Details</h5>
-
-      <ul>
-        <li><span class="fw-bolder">⁠Date:</span> July 13, 2025</li>
-        <li><span class="fw-bolder">⁠Venue:</span> Annai Veilankanni’s College of Arts and Science, VGP Salai, Parsan
-          Nagar, Vinayagapuram, Chennai - 600
-          015</li>
-      </ul>
-    </div>
-
-    Contact Us
-    For queries, call or WhatsApp: 6380559492
-
-
-    <h6 class="mt-5 fs-5 fw-bold">Let's come together to raise awareness against drug abuse!</h6>
+  <div>
+    <div class="image"><img src="assets/event/3.webp" alt=""></div>
+    <div class="image"><img src="assets/event/4.webp" alt=""></div>
   </div>
+</div>
+
+<div class="broucherArea">
+  <div class="image-container" (click)="downloadBrochure()">
+    <img src="/assets/event/LIT.webp" alt="Event" class="event-image" />
+    <div class="hover-text">Click here to download the Brochure</div>
+  </div>
+
+  <div class="form-link qr-code text-center">
+    <h2 class="text-warning text-decoration-underline">Google Form Link for Uploading your Files</h2>
+    <h3 class="text-success"><a href="https://forms.gle/MbNdLC38Cp7eYE776" target="_blank"
+        class="text-success text-decoration-none flash"> Click
+        Me </a></h3>
+    <h5 class="text-warning fw-bolder text-center text-decoration-underline">(or)</h5>
+    <h3 class="text-success">Scan Me</h3>
+    <img src="/assets/event/qr-code.png" alt="">
+  </div>
+
 </div>

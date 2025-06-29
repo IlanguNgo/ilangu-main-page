@@ -12,8 +12,8 @@
 }
 
 .logo img {
-  height: 100px !important;
-  width: 20vw !important;
+  height: 100px;
+  width: 20vw;
   transition: all 0.3s ease-in-out;
   // width: 75px;
 }
@@ -51,8 +51,59 @@
   transition: all 0.3s;
 }
 
+.line {
+  width: 90vw;
+  height: 3px;
+  background-color: black;
+  margin: 1vh 5vw;
+}
+.footer-center-part {
+  ul {
+    list-style-type: none;
+  }
+}
+.footer-first {
+  img {
+    height: 80px;
+    width: 90px;
+  }
+  .footer-first-para {
+    width: 60vw;
+  }
+}
+.icons {
+  a {
+    margin: 1vh 5px;
+  }
+}
+
+/* ✅ Ultra-Wide Screens (TVs, 4K Monitors) */
+@media screen and (max-width: 1600px) {
+  .logo img {
+    height: 80px;
+    width: 100px;
+  }
+
+  .nav {
+    gap: 50px;
+  }
+
+  .nav li {
+    font-size: 24px;
+  }
+  .footer-first {
+    img {
+      height: 80px;
+      width: 150px;
+    }
+  }
+  // .btn {
+  //   font-size: 22px;
+  //   padding: 14px 28px;
+  // }
+}
 /* ✅ Large Screens (PC/Laptops) */
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .logo img {
     height: 80px;
     width: 90px;
@@ -70,29 +121,14 @@
   //   font-size: 20px;
   //   padding: 12px 24px;
   // }
+  .footer-first {
+    img {
+      height: 80px;
+      width: 150px;
+      margin: 0 1vw;
+    }
+  }
 }
-
-/* ✅ Ultra-Wide Screens (TVs, 4K Monitors) */
-@media screen and (min-width: 1600px) {
-  .logo img {
-    height: 90px;
-    width: 90px;
-  }
-
-  .nav {
-    gap: 50px;
-  }
-
-  .nav li {
-    font-size: 24px;
-  }
-
-  // .btn {
-  //   font-size: 22px;
-  //   padding: 14px 28px;
-  // }
-}
-
 /* ✅ Responsive for Tablets */
 @media screen and (max-width: 1024px) {
   .logo img {
@@ -102,6 +138,11 @@
 
   .nav {
     gap: 15px;
+  }
+  .footer-first {
+    img {
+      padding: 0 1vw;
+    }
   }
 }
 
@@ -117,7 +158,6 @@
     height: 90px;
     width: 100px;
     // margin-bottom: 10px;
-    margin-top: -3vh;
   }
 
   .showMenu {
@@ -149,41 +189,15 @@
   .nav li {
     text-align: center;
   }
-}
-// Footer
 
-.line {
-  width: 90vw;
-  height: 3px;
-  background-color: black;
-  margin: 1vh 5vw;
-}
-.footer-center-part {
-  ul {
-    list-style-type: none;
-  }
-}
-.footer-first {
-  img {
-    height: 13vh;
-    width: 8vw;
-  }
-  .footer-first-para {
-    width: 60vw;
-  }
-}
-.icons {
-  a {
-    margin: 1vh 5px;
-  }
-}
-// .footer-area {
-//   background: orange;
-// }
-// .footer-details-section {
-//   background: orange;
-// }
-@media screen and (max-width: 800px) {
+  // Footer
+  // .footer-area {
+  //   background: orange;
+  // }
+  // .footer-details-section {
+  //   background: orange;
+  // }
+
   .footer-section {
     flex-direction: column;
     align-items: center;
@@ -191,8 +205,8 @@
       img {
         margin: 1vh 0;
         text-align: center;
-        width: 30vw;
-        height: 13vh;
+        width: 150px;
+        height: 70px;
       }
       p {
         width: 90vw;

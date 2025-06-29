@@ -1,13 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import {
+  NgbCarousel,
+  NgbCarouselModule,
+  NgbSlideEvent,
+} from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule, RouterLink, NgbCarouselModule], // ✅ Add NgbCarouselModule here
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  constructor() {
-    console.log('Debugging working');
+  constructor() {}
+
+  images = [
+    'assets/homepage/join_us.webp',
+    'assets/homepage/event_1.webp',
+
+    'assets/images/drug-free.webp',
+  ];
+  @ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
+
+  onSlide(event: NgbSlideEvent) {
+    // Optional: handle slide events
   }
 }
