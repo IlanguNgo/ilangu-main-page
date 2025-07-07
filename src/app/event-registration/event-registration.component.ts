@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { CommonModule } from '@angular/common';
 import { EventRegistrationService } from '../services/event-registration.service';
-
+import { ViewportScroller } from '@angular/common';
 import {
   FormBuilder,
   FormGroup,
@@ -19,7 +19,8 @@ export class EventRegistrationComponent implements OnInit {
   registrationForm!: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private registrationService: EventRegistrationService
+    private registrationService: EventRegistrationService,
+    private scroller: ViewportScroller
   ) {}
 
   ngOnInit() {
@@ -32,7 +33,9 @@ export class EventRegistrationComponent implements OnInit {
       collegeName: ['', Validators.required],
     });
   }
-
+  scrollTo(anchor: string) {
+    this.scroller.scrollToAnchor(anchor);
+  }
   onRegister() {
     if (this.registrationForm.valid) {
       console.log('Form is valid ...', this.registrationForm.value);

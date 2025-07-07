@@ -168,10 +168,12 @@
       </div>
 
       <!-- Submit Button -->
-      <div class="align-self-center mx-auto">
-        <button type="submit" [disabled]="registrationForm.invalid" class="btn btn-success">
+      <div class="align-self-center mx-auto row">
+        <button type="submit" [disabled]="registrationForm.invalid" class="btn btn-success col-6">
           Register
         </button>
+        <a class="btn btn-warning col-6 flash" (click)="scrollTo('broucher')">Scroll Down To Get The Google Forms
+          Link</a>
       </div>
     </form>
   </div>
@@ -181,10 +183,10 @@
   </div>
 </div>
 
-<div class="broucherArea">
+<div class="broucherArea my-0 my-md-5" id="broucher">
   <div class="image-container" (click)="downloadBrochure()">
     <img src="/assets/event/LIT.webp" alt="Event" class="event-image" />
-    <div class="hover-text">Click here to download the Brochure</div>
+    <div class="hover-text flash">Click here to download the Brochure</div>
   </div>
 
   <div class="form-link qr-code text-center">
