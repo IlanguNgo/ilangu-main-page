@@ -42,4 +42,11 @@ export const routes: Routes = [
         (m) => m.EventRegistrationComponent
       ),
   },
+  {
+    path: 'thehiddenpath',
+    loadComponent: () =>
+      import('./hidden-path/hidden-path.component').then(
+        (m) => m.HiddenPathComponent
+      ),
+  },
 ];
