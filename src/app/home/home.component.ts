@@ -17,7 +17,7 @@ export class HomeComponent {
 
   images = [
     'assets/homepage/join_us.webp',
-    'assets/homepage/event_1.webp',
+    'assets/homepage/theHiddenStars.webp',
 
     'assets/images/drug-free.webp',
   ];
