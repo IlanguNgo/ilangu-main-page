@@ -43,10 +43,14 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'thehiddenpath',
+    path: 'thehiddenstars',
     loadComponent: () =>
       import('./hidden-path/hidden-path.component').then(
         (m) => m.HiddenPathComponent
       ),
   },
+  {
+    path :"shadowsunveiled",
+    loadComponent:()=>import('./shadowsunveiled/shadowsunveiled.component').then(m=>m.ShadowsunveiledComponent)
+  }
 ];

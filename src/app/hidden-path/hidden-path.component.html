@@ -1,1 +1,190 @@
-<p>hidden-path works!</p>
+<div class="hidden-stars">
+
+</div>
+
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12">
+      <div class="card shadow-lg p-4">
+        <h3 class="text-center mb-4 fw-bold" style="color: #7938c9;">The Hidden Stars </h3>
+        <h4 class="text-center fw-bolder mb-3" style="color: #ae87fa;">Registration</h4>
+
+        <form [formGroup]="hiddenStar" (ngSubmit)="onSubmit()">
+          <!-- Name -->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Name"
+              formControlName="name"
+            />
+            <label for="name">Teacher Name <span class="text-danger">*</span></label>
+            <div
+              *ngIf="hiddenStar.get('name')?.invalid && hiddenStar.get('name')?.touched"
+              class="text-danger small"
+            >
+             Teacher Name is required.
+            </div>
+          </div>
+
+          <!-- Gender -->
+          <div class="mb-3">
+            <label class="fw-bold mb-2 d-block">Gender <span class="text-danger">*</span></label>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                id="male"
+                class="form-check-input"
+                value="Male"
+                formControlName="gender"
+              />
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                type="radio"
+                id="female"
+                class="form-check-input"
+                value="Female"
+                formControlName="gender"
+              />
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div
+              *ngIf="hiddenStar.get('gender')?.invalid && hiddenStar.get('gender')?.touched"
+              class="text-danger small"
+            >
+              Please select a gender.
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Email"
+              formControlName="email"
+            />
+            <label for="email">Email <span class="text-danger">*</span></label>
+            <div
+              *ngIf="hiddenStar.get('email')?.invalid && hiddenStar.get('email')?.touched"
+              class="text-danger small"
+            >
+              Please enter a valid email.
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              id="phoneNumber"
+              class="form-control"
+              placeholder="Phone Number"
+              formControlName="phoneNumber"
+            />
+            <label for="phoneNumber">Phone Number <span class="text-danger">*</span></label>
+            <div
+              *ngIf="hiddenStar.get('phoneNumber')?.invalid && hiddenStar.get('phoneNumber')?.touched"
+              class="text-danger small"
+            >
+              Phone Number is required.
+            </div>
+          </div>
+
+          <!-- School Name -->
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              id="schoolName"
+              class="form-control"
+              placeholder="School Name"
+              formControlName="schoolName"
+            />
+            <label for="schoolName">School Name <span class="text-danger">*</span></label>
+            <div
+              *ngIf="hiddenStar.get('schoolName')?.invalid && hiddenStar.get('schoolName')?.touched"
+              class="text-danger small"
+            >
+              School name is required.
+            </div>
+          </div>
+
+          <!-- Topic -->
+          <div class="form-floating mb-3">
+            <select
+              id="topic"
+              class="form-select"
+              formControlName="topic"
+            >
+              <option value="">Select a Topic</option>
+              <option *ngFor="let topic of eventTopics" [value]="topic.id">
+                {{ topic.name }}
+              </option>
+            </select>
+            <label for="topic">Select Topic <span class="text-danger">*</span></label>
+            <div
+              *ngIf="hiddenStar.get('topic')?.invalid && hiddenStar.get('topic')?.touched"
+              class="text-danger small"
+            >
+              Please select a topic.
+            </div>
+          </div>
+
+          <!-- PPT Upload -->
+          <div class="mb-3">
+            <label for="ppt" class="form-label fw-bold">Upload PPT File <span class="text-danger">*</span></label>
+            <input
+              type="file"
+              id="ppt"
+              class="form-control"
+              accept=".ppt,.pptx"
+              (change)="onFileChange($event)"
+              required
+            />
+            <div
+              *ngIf="hiddenStar.get('ppt')?.errors?.['required'] && hiddenStar.get('ppt')?.touched"
+              class="text-danger small"
+            >
+              PPT file is required.
+            </div>
+            <div
+              *ngIf="hiddenStar.get('ppt')?.errors?.['invalidType'] && hiddenStar.get('ppt')?.touched"
+              class="text-danger small"
+            >
+              Only .ppt or .pptx files are allowed.
+            </div>
+          </div>
+           <div class="form-floating mb-3">
+            <textarea
+              type="text"
+              id="comment"
+              class="form-control h-25"
+              placeholder="Ask any Queries "
+              rows="3"
+             
+              formControlName="comment"
+            ></textarea>
+            <label for="name">Comment<span class="text-danger">*</span></label>
+           
+          </div>
+          <!-- Submit -->
+          <div class="d-grid mt-4">
+            <button
+              type="submit"
+              class="btn btn-success btn-lg"
+              [disabled]="hiddenStar.invalid"
+            >
+              Submit
+            </button>
+            <button type="button" (click)="downloadBroucher()" class="btn btn-warning btn-lg mt-3 ">Download Brochure</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

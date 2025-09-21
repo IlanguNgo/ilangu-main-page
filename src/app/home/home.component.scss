@@ -3,10 +3,11 @@
   width: 100vw;
 }
 .join-home {
-  height: 5vh;
+  height: auto;
+  border-radius: 7px;
   margin-top: 1vh;
   color: white;
-  background: linear-gradient(to bottom right, rgb(68, 230, 255), green);
+  background: linear-gradient(to bottom right, #ae87fa, #7938c9);
   background-size: 200% 200%;
   animation: glowingAnimation 5s infinite ease-in-out;
 }
