@@ -1,4 +1,12 @@
-import { Component, HostListener } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+  HostListener,
+} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
@@ -10,6 +18,7 @@ import { RouterOutlet, RouterLink } from '@angular/router';
 export class AppComponent {
   title = 'Ilangu Trust';
   menuOpen = false;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
   toggleSideMenu() {
     this.menuOpen = !this.menuOpen;
     const menu = document.getElementById('sideMenu');
@@ -19,7 +28,6 @@ export class AppComponent {
       menu?.classList.remove('showNavMenu');
     }
   }
-
   closeSideMenu() {
     this.menuOpen = false;
     document.getElementById('sideMenu')?.classList.remove('showNavMenu');
@@ -39,6 +47,11 @@ export class AppComponent {
       !menuButton.contains(event.target as Node)
     ) {
       this.closeSideMenu();
+    }
+  }
+  scrollToTop() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }
   }
 }

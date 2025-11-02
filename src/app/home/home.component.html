@@ -74,7 +74,7 @@
       <h3>Slide {{ i + 1 }}</h3>
     </div> -->
 
-    <div class="picsum-img-wrapper">
+    <div>
       <img [src]="img" alt="Image {{ i + 1 }}" class="w-100" />
     </div>
 
@@ -85,8 +85,8 @@
 
 
 <!-- JOIN US  ........... -->
-<div class="join-home pb-1 mt-4 w-75 mx-auto" style="cursor: pointer;" routerLink="/thehiddenstars">
-  <p class="join-text  "  >Upcoming Event - The Hidden Stars [&nbsp;November 1, 2025&nbsp;] </p>
+<div class="join-home pb-1 mt-4 w-75 mx-auto" style="cursor: pointer;">
+  <p class="join-text  ">Upcoming Event - The Hidden Stars [&nbsp;November 8, 2025&nbsp;] </p>
 </div>
 <!-- <div class="join-home pb-1 mt-4 w-75 mx-auto" style="cursor: pointer;" routerLink="/shadowsunveiled">
   <p class="join-text ">Upcoming Event - Shadows Unveiled [&nbsp;November 15, 2025&nbsp;] </p>
@@ -216,7 +216,8 @@
         </p>
         <div class="text-center m-4">
           <button class="btn btn-success text-capitalize heart">
-            <span class="fs-3 fw-bolder">Donate Now</span>
+
+            <span class="fs-3 fw-bolder" routerLink="donate">Donate Now</span>
             <!-- <span class="d-block text-warn"> to lighten the future</span> -->
           </button>
         </div>

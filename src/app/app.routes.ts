@@ -29,28 +29,25 @@ export const routes: Routes = [
       import('./ourwork/ourwork.component').then((m) => m.OurworkComponent),
   },
   {
+    path: 'donate',
+    loadComponent: () =>
+      import('./donate/donate.component').then(
+        (component) => component.DonateComponent
+      ),
+  },
+  {
     path: 'volunteer',
     loadComponent: () =>
       import('./volunteer/volunteer.component').then(
         (m) => m.VolunteerComponent
       ),
   },
-  {
-    path: 'register',
-    loadComponent: () =>
-      import('./event-registration/event-registration.component').then(
-        (m) => m.EventRegistrationComponent
-      ),
-  },
-  {
-    path: 'thehiddenstars',
-    loadComponent: () =>
-      import('./hidden-path/hidden-path.component').then(
-        (m) => m.HiddenPathComponent
-      ),
-  },
-  {
-    path :"shadowsunveiled",
-    loadComponent:()=>import('./shadowsunveiled/shadowsunveiled.component').then(m=>m.ShadowsunveiledComponent)
-  }
+
+  // {
+  //   path: 'shadowsunveiled',
+  //   loadComponent: () =>
+  //     import('./shadowsunveiled/shadowsunveiled.component').then(
+  //       (m) => m.ShadowsunveiledComponent
+  //     ),
+  // },
 ];

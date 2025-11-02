@@ -1,0 +1,62 @@
+<div class="donation-section">
+    <!-- Image Section -->
+    <div class="donation-image">
+        <img src="assets/donate/Payment_Scanner.jpeg" alt="Donation QR Code" (click)="downloadImage()" />
+    </div>
+
+    <!-- Text Section -->
+    <div class="donation-text">
+        <h2>Make a Difference Today 💖</h2>
+        <p>
+            Your small contribution helps us bring smiles, education, and healthcare
+            to those in need. Scan the QR code to donate instantly — every rupee
+            counts!
+        </p>
+    </div>
+</div>
+
+
+<!-- 🏦 Section 2: OR Banking Details -->
+<div class="banking-section d-flex-wrap">
+    <!-- Left Side – Inspiring Quote -->
+    <div class="banking-quote">
+        <h2>“The smallest act of kindness is worth more than the grandest intention.”</h2>
+        <p>
+            When you donate, you’re not just giving money — you’re giving <b>hope</b>,
+            <b>education</b>, and a <b>chance</b> at a better tomorrow.
+            Join hands with us to bring change that truly matters. 🌍
+        </p>
+    </div>
+
+    <!-- Right Side – Banking Details -->
+    <div class="banking-info">
+        <div class="banking-header">
+            <h2>Banking Details</h2>
+            <p class="subtitle">Prefer a direct transfer? Here’s our account information 👇</p>
+        </div>
+
+        <div class="banking-details">
+            <div class="bank-detail" (click)="copyText('ILANGU TRUST','ILANGU TRUST')">
+                <span class="label">Account Name:</span>
+                <span class="value">ILANGU TRUST</span>
+            </div>
+
+            <div class="bank-detail" (click)="copyText('AXIS BANK','AXIS BANK')">
+                <span class="label">Bank Name:</span>
+                <span class="value">AXIS BANK</span>
+            </div>
+
+            <div class="bank-detail" (click)="copyText('925020028744438','Account Number')">
+                <span class="label">Account Number:</span>
+                <span class="value">925020028744438</span>
+            </div>
+
+            <div class="bank-detail" (click)="copyText('UTIB0001886','IFSC Code')">
+                <span class="label">IFSC Code:</span>
+                <span class="value">UTIB0001886</span>
+            </div>
+        </div>
+
+        <p class="copy-hint">💡 Tap or click any field to copy!</p>
+    </div>
+</div>

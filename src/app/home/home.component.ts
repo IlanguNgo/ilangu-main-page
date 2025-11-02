@@ -15,12 +15,7 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent {
   constructor() {}
 
-  images = [
-    'assets/homepage/join_us.webp',
-    'assets/homepage/theHiddenStars.webp',
-
-    'assets/images/drug-free.webp',
-  ];
+  images = ['assets/homepage/join_us.webp', 'assets/images/drug-free.webp'];
   @ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
 
   onSlide(event: NgbSlideEvent) {

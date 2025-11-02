@@ -16,13 +16,14 @@
       <li><a routerLink="/ourwork" (click)="closeSideMenu()">Our Work</a></li>
       <li><a href="https://www.blog.ilangu.ngo/" target="_blank" (click)="closeSideMenu()">Blogs</a></li>
       <li><a routerLink="/contact" (click)="closeSideMenu()">Contact Us</a></li>
-      <li><span class="btn btn-success fw-bold" (click)="closeSideMenu()">Donate</span></li>
+      <li><span class="btn btn-success fw-bold" (click)="closeSideMenu()" routerLink="donate">Donate</span></li>
       <li>
         <span class="btn btn-warning fw-semibold" routerLink="volunteer" (click)="closeSideMenu()">
           Volunteer Enrollment</span>
       </li>
-      <li> <span class="btn btn-danger fw-semibold" routerLink="thehiddenstars" (click)="closeSideMenu()">Register</span>
-      </li>
+      <!-- <li> <span class="btn btn-danger fw-semibold" routerL
+          (click)="closeSideMenu()">Register</span>
+      </li> -->
     </ul>
   </nav>
 </div>
@@ -80,7 +81,7 @@
           <p class="card-text">
             Let's unite to lighten the dream of the precious souls
           </p>
-          <a href="#" class="btn btn-success  fs-5 heart fw-bold">Donate</a>
+          <a href="#" class="btn btn-success  fs-5 heart fw-bold" routerLink="donate" (click)="scrollToTop()">Donate</a>
         </div>
       </div>
     </div>
