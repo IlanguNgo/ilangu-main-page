@@ -1,0 +1,12 @@
+.shadows-unveiled-banner{
+    
+  background: url("../../../public/assets/event/shadows-unveiled-banner.jpeg");
+  height: 70vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @media screen and (max-width: 900px) {
+    height: 40vh;
+  }
+}

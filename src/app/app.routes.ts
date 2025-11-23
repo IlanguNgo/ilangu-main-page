@@ -43,11 +43,11 @@ export const routes: Routes = [
       ),
   },
 
-  // {
-  //   path: 'shadowsunveiled',
-  //   loadComponent: () =>
-  //     import('./shadowsunveiled/shadowsunveiled.component').then(
-  //       (m) => m.ShadowsunveiledComponent
-  //     ),
-  // },
+  {
+    path: 'shadowsunveiled',
+    loadComponent: () =>
+      import('./shadowsunveiled/shadowsunveiled.component').then(
+        (m) => m.ShadowsunveiledComponent
+      ),
+  },
 ];
