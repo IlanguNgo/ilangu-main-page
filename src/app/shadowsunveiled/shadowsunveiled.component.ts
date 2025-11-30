@@ -12,6 +12,7 @@ import { ShadowsUnveiledService } from '../services/shadows-unveiled.service';
 import Swal from 'sweetalert2';
 import { ActivatedRoute } from '@angular/router';
 import { PLATFORM_ID, inject } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-shadowsunveiled',
   standalone: true,
@@ -47,7 +48,8 @@ export class ShadowsunveiledComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private shadowsUnveiledService: ShadowsUnveiledService,
-    private router: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -77,12 +79,17 @@ export class ShadowsunveiledComponent implements OnInit {
       this.updateParticipants(size);
     });
 
-    this.router.queryParams.subscribe((param) => {
+    this.route.queryParams.subscribe((param) => {
       if (
         param['action'] == 'downloadBrochure' &&
         isPlatformBrowser(this.platformID)
       ) {
         this.downloadBroucher();
+        this.router.navigate([], {
+          relativeTo: this.route,
+          queryParams: {},
+          replaceUrl: true,
+        });
       }
     });
   }
