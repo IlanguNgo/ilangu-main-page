@@ -7,9 +7,10 @@
   border-radius: 7px;
   margin-top: 1vh;
   color: white;
-  background: linear-gradient(to bottom right, #ae87fa, #7938c9);
+  background: linear-gradient(to bottom right, #d80c0c, #0a0202);
   background-size: 200% 200%;
   animation: glowingAnimation 5s infinite ease-in-out;
+  transition: margin 0.5s ease-in-out; // smooth vertical movement
 }
 
 @keyframes glowingAnimation {

@@ -18,7 +18,7 @@
                     <form [formGroup]="shadowFormGroup" (ngSubmit)="submit()">
                         <!-- Institution Information -->
                         <div class="section-title mb-3">
-                            <h4 class="text-primary">Institution Information</h4>
+                            <h4 class=" ">Institution Information</h4>
                             <hr />
                         </div>
 
@@ -62,7 +62,7 @@
                         <!-- Event Type Toggle - Inline -->
                         <div class="section-title mb-3 mt-4">
                             <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                                <h4 class="text-primary mb-0">Event Type</h4>
+                                <h4 class=" mb-0">Event Type</h4>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" id="teamEventSwitch"
                                         formControlName="isTeamEvent" />
@@ -102,7 +102,7 @@
 
                         <!-- Participants Information -->
                         <div class="section-title mb-3">
-                            <h4 class="text-primary">
+                            <h4 class=" ">
                                 {{ shadowFormGroup.get('isTeamEvent')?.value ? 'Team Members' : 'Participant Details' }}
                             </h4>
                             <hr />
@@ -146,7 +146,14 @@
                                                 <input class="form-check-input" type="checkbox"
                                                     formControlName="followedPage" [id]="'followedPage-' + i" />
                                                 <label class="form-check-label" [for]="'followedPage-' + i">
-                                                    I follow your Instagram page
+                                                    I follow your Instagram page <span class="fw-bold fs-6">,
+                                                        If not kindly
+                                                        follow our instagram page
+                                                        <a class="text-white"
+                                                            href="https://www.instagram.com/ilangutrust?igsh=MTRtdDEyeXZlYnN2bQ=="
+                                                            target="_blank"><i
+                                                                class="fa-brands fa-instagram text-info fs-5"
+                                                                style="font-family: 'Font Awesome 6 Brands';"></i></a></span>
                                                 </label>
                                             </div>
                                         </div>
@@ -157,7 +164,7 @@
 
                         <!-- Event Selection -->
                         <div class="section-title mb-3">
-                            <h4 class="text-primary">Select Events</h4>
+                            <h4 class=" ">Select Events</h4>
                             <hr />
                         </div>
 
@@ -236,7 +243,7 @@
 
                         <!-- Payment Section -->
                         <div class="section-title mb-3 mt-4">
-                            <h4 class="text-primary">Payment</h4>
+                            <h4 class=" ">Payment</h4>
                             <hr />
                         </div>
 
@@ -264,5 +271,12 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- Brochure Download -->
+<div class="text-center my-4">
+    <div class="btn btn-danger heart" (click)="downloadBroucher()">
+        Click here to download the brochure
     </div>
 </div>

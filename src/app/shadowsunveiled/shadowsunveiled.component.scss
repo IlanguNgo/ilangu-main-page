@@ -1,5 +1,14 @@
 /* shadowsunveiled.component.scss */
-
+$primary_color: #d80c0c;
+$secondary_color: #0a0202;
+$banner-gradient: linear-gradient(
+  135deg,
+  $primary_color 0%,
+  $secondary_color 100%
+);
+.banner-container {
+  background: $banner-gradient;
+}
 // Banner Section
 .shadows-unveiled-banner {
   background: url("../../../public/assets/event/shadows-unveiled-banner.jpeg");
@@ -36,7 +45,7 @@
 // Container
 .shadows-unveiled-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #921e1f 0%, #0a0202 100%);
 }
 
 .banner-section {
@@ -71,7 +80,8 @@
   }
 
   .card-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background: $banner-gradient;
     border-bottom: none;
 
     h2 {
@@ -94,14 +104,14 @@
       font-size: 1.25rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: #667eea;
+      color: $primary_color;
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
     hr {
-      border-top: 2px solid #667eea;
+      border-top: 2px solid wheat;
       opacity: 0.3;
       margin-top: 0.5rem;
     }
@@ -215,7 +225,7 @@
       }
 
       .card-title {
-        color: #667eea;
+        color: $primary_color;
         font-weight: 600;
         font-size: 1rem;
         margin-bottom: 1rem;
@@ -242,7 +252,7 @@
     }
 
     .form-check {
-      margin-bottom: 0;
+      // margin-bottom: 0;
 
       .form-check-label {
         font-size: 1rem;
@@ -259,7 +269,8 @@
 
   // Buttons
   .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: $banner-gradient;
     border: none;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
@@ -411,7 +422,8 @@ input[type="file"] {
 
   &::file-selector-button {
     padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: $banner-gradient;
     color: white;
     border: none;
     border-radius: 6px;
@@ -469,4 +481,13 @@ input[type="file"] {
       display: block;
     }
   }
+}
+h5 {
+  color: $primary_color;
+}
+.text-danger {
+  color: $primary_color !important;
+}
+.btn-danger {
+  background-color: $primary_color !important;
 }

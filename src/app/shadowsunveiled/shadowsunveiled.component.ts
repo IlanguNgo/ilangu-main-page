@@ -465,7 +465,7 @@ export class ShadowsunveiledComponent implements OnInit {
   }
   downloadBroucher() {
     const downloadLink = document.createElement('a');
-    downloadLink.href = '/assets/event/theHiddenStars.pdf';
+    downloadLink.href = '/assets/event/shadows_unveiled_brochure.pdf';
     downloadLink.download = 'ShadowsUnveiledBrochure.pdf';
     document.body.appendChild(downloadLink);
     downloadLink.click();
