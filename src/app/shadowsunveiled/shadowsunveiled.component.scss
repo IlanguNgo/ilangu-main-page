@@ -448,3 +448,25 @@ input[type="file"] {
     opacity: 1;
   }
 }
+.banner-container {
+  width: 100%;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  @media screen and (min-width: 1600px) {
+    width: 100vw;
+    height: 500px;
+    margin-left: calc(-50vw + 50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Fills space, crops if needed
+      object-position: center; // What to show when cropping
+      display: block;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 // shadowsunveiled.component.ts
-import { CommonModule } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
   ReactiveFormsModule,
@@ -10,7 +10,8 @@ import {
 } from '@angular/forms';
 import { ShadowsUnveiledService } from '../services/shadows-unveiled.service';
 import Swal from 'sweetalert2';
-
+import { ActivatedRoute } from '@angular/router';
+import { PLATFORM_ID, inject } from '@angular/core';
 @Component({
   selector: 'app-shadowsunveiled',
   standalone: true,
@@ -42,10 +43,11 @@ export class ShadowsunveiledComponent implements OnInit {
     { id: 'music_band', label: 'Music Band' },
     { id: 'animatedVideo', label: 'Animated Video' },
   ];
-
+  private platformID = inject(PLATFORM_ID);
   constructor(
     private fb: FormBuilder,
-    private shadowsUnveiledService: ShadowsUnveiledService
+    private shadowsUnveiledService: ShadowsUnveiledService,
+    private router: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -74,6 +76,15 @@ export class ShadowsunveiledComponent implements OnInit {
     this.shadowFormGroup.get('teamSize')?.valueChanges.subscribe((size) => {
       this.updateParticipants(size);
     });
+
+    this.router.params.subscribe((param) => {
+      if (
+        param['action'] == 'downloadBrochure' &&
+        isPlatformBrowser(this.platformID)
+      ) {
+        this.downloadBroucher();
+      }
+    });
   }
 
   get participants(): FormArray {
@@ -93,6 +104,8 @@ export class ShadowsunveiledComponent implements OnInit {
           '',
           [Validators.required, Validators.pattern(/^\d{10}$/)],
         ],
+        instagramId: [''], // Add this - no validators (optional)
+        followedPage: [false], // Add this - boolean for checkbox
       })
     );
   }
@@ -404,7 +417,11 @@ export class ShadowsunveiledComponent implements OnInit {
         this.participants.clear();
         this.addParticipant();
         this.submitted = false;
-
+        //clear all the payment values
+        const fileInputs = document.querySelectorAll('input[type="file"]');
+        fileInputs.forEach((input: any) => {
+          input.value = '';
+        });
         // Scroll to top
         window.scrollTo({ top: 0, behavior: 'smooth' });
       },
@@ -438,5 +455,13 @@ export class ShadowsunveiledComponent implements OnInit {
       return 'Invalid phone number (10 digits required)';
     if (field?.hasError('min')) return 'Team size must be at least 2';
     return '';
+  }
+  downloadBroucher() {
+    const downloadLink = document.createElement('a');
+    downloadLink.href = '/assets/event/theHiddenStars.pdf';
+    downloadLink.download = 'ShadowsUnveiledBrochure.pdf';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
   }
 }
