@@ -77,7 +77,7 @@ export class ShadowsunveiledComponent implements OnInit {
       this.updateParticipants(size);
     });
 
-    this.router.params.subscribe((param) => {
+    this.router.queryParams.subscribe((param) => {
       if (
         param['action'] == 'downloadBrochure' &&
         isPlatformBrowser(this.platformID)

@@ -50,11 +50,4 @@ export const routes: Routes = [
         (m) => m.ShadowsunveiledComponent
       ),
   },
-  {
-    path: 'shadowsunveiled/:action',
-    loadComponent: () =>
-      import('./shadowsunveiled/shadowsunveiled.component').then(
-        (m) => m.ShadowsunveiledComponent
-      ),
-  },
 ];
