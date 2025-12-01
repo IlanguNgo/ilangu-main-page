@@ -12,11 +12,11 @@ import { ShadowsUnveiledService } from '../services/shadows-unveiled.service';
 import Swal from 'sweetalert2';
 import { ActivatedRoute } from '@angular/router';
 import { PLATFORM_ID, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-shadowsunveiled',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './shadowsunveiled.component.html',
   styleUrl: './shadowsunveiled.component.scss',
 })

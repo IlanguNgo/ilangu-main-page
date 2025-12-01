@@ -1,0 +1,204 @@
+.donation-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fbff, #e3f2fd);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+}
+
+.donation-image {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.donation-image img {
+  max-width: 100%;
+  width: 500px;
+  height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.donation-text {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.donation-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5084bd, #00c6ff);
+  //   background: linear-gradient(90deg, #ffc107, #ffb347);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.donation-text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- Responsive Behavior --- */
+@media (min-width: 768px) {
+  .donation-section {
+    flex-direction: row; /* Side by side on large screens */
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-section {
+    flex-direction: column; /* Stack vertically on mobile */
+    text-align: center;
+  }
+  .donation-image img {
+    max-width: 100%;
+    width: 300px;
+    height: 350px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* 🏦 Section 2 Layout */
+.banking-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fbff, #eaf6ff);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+/* Left Side – Quote */
+.banking-quote {
+  flex: 1 1 400px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.banking-quote h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  //   background: linear-gradient(90deg, #198754, #63e6be);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.banking-quote p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* Right Side – Banking Info */
+.banking-info {
+  flex: 1 1 400px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Header Styling */
+.banking-info .banking-header h3 {
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.banking-info .banking-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  //   background: linear-gradient(90deg, #198754, #63e6be);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.banking-info .subtitle {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Banking Details Boxes */
+.banking-details {
+  display: grid;
+  gap: 1rem;
+  text-align: left;
+}
+
+.bank-detail {
+  display: flex;
+  justify-content: space-between;
+  background: #f9fbff;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.bank-detail:hover {
+  background: #e9f5ff;
+  transform: scale(1.02);
+}
+
+.bank-detail .label {
+  font-weight: 600;
+  color: #333;
+}
+
+.bank-detail .value {
+  font-family: monospace;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.copy-hint {
+  margin-top: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Behavior --- */
+@media (max-width: 767px) {
+  .banking-section {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .banking-quote,
+  .banking-info {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .bank-detail {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bank-detail .label {
+    margin-bottom: 0.3rem;
+  }
+}
