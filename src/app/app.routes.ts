@@ -50,4 +50,9 @@ export const routes: Routes = [
         (m) => m.ShadowsunveiledComponent
       ),
   },
+  {
+    path: 'payment',
+    loadComponent: () =>
+      import('./payment/payment.component').then((m) => m.PaymentComponent),
+  },
 ];
